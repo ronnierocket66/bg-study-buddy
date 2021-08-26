@@ -15,7 +15,7 @@ const Wrapper = styled.div`
 
 const Root = () => (
  <>
- <ThemeProvider theme={theme   }>
+ <ThemeProvider theme={theme}>
   <GlobalStyle />
     <Wrapper>
       <UsersList />
