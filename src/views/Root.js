@@ -4,15 +4,12 @@ import { GlobalStyle } from 'assets/styles/GlobalStyle';
 import { theme } from 'assets/styles/theme';
 import { Wrapper } from './Root.styles';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { users as usersData } from 'data/users';
 import MainTemplate from 'components/templates/MainTemplate/MainTemplate';
 import AddUser from 'views/AddUser';
 import Dashboard from 'views/Dashboard';
 import UsersProvider from 'providers/UsersProvider';
 
-
 const Root = () => {
-
   return (
     <Router>
       <ThemeProvider theme={theme}>
@@ -24,7 +21,7 @@ const Root = () => {
                 <Route path="/add-user">
                   <AddUser />
                 </Route>
-                 <Route path="/">
+                <Route path="/">
                   <Dashboard />
                 </Route>
               </Switch>

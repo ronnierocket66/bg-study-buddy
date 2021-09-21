@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { users as usersData } from 'data/users';
 
-
 export const UsersContext = React.createContext({
   users: [],
   handleAddUser: () => {},
   deleteUser: () => {},
 });
-
 
 export const UsersProvider = ({ children }) => {
   const [users, setUsers] = useState(usersData);
@@ -29,13 +27,8 @@ export const UsersProvider = ({ children }) => {
 
   return (
     <UsersContext.Provider
-      value={{
-        users,
-        handleAddUser,
-        deleteUser,
-      }}
-    >
-        {children}
+      value={{ users, handleAddUser, deleteUser }}>
+      {children}
     </UsersContext.Provider>
   );
 };

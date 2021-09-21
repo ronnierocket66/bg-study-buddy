@@ -1,17 +1,21 @@
 {
-    "extends": ["react-app", "react-app/jest", "plugin:prettier/recommended", "prettier", "plugin:cypress/recommended"],
-    "plugins": ["prettier"],
-    "rules": {
-      "prettier/prettier": ["warn", {
+  "extends": ["react-app", "react-app/jest", "plugin:prettier/recommended", "prettier", "plugin:cypress/recommended"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": [
+      "warn",
+      {
         "printWidth": 150,
-        "singleQuote": true
-      }],
-      "import/first": 0
-    },
-    "env": {
-      "browser": true,
-      "node": true,
-      "es6": true
-    },
-    "parser": "babel-eslint"
-  }
+        "singleQuote": true,
+        "endOfLine": "off"
+      }
+    ],
+    "import/first": 0
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "parser": "babel-eslint"
+}
