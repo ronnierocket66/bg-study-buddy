@@ -7,7 +7,7 @@
       {
         "printWidth": 150,
         "singleQuote": true,
-        "endOfLine": "off"
+        "endOfLine": "auto"
       }
     ],
     "import/first": 0
