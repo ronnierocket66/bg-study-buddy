@@ -3,7 +3,7 @@ import { ArticleWrapper, ContentWrapper, NewsSectionHeader, TitleWrapper, Wrappe
 import { Button } from 'components/atoms/Button/Button';
 import axios from 'axios';
 
-// const token1 = 86468a1f161ac694b687631e50c833;
+
 
 export const query = `
          {
@@ -23,7 +23,8 @@ const NewsSection = () => {
   const [articles, setArticles] = useState([]);
   const [error, setError] = useState('');
 
-  useEffect(() => {
+  useEffect(() => { 
+    console.log(process.env.REACT_APP_DATOCMS_TOKEN)
     axios
       .post(
         'https://graphql.datocms.com/',
